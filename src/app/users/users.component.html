@@ -1,0 +1,16 @@
+<br><br>
+    
+    <label for="user-input">add new user</label>
+
+    <input  type="text" id="user-input" #newUser >
+    <button mat-button color="primary" type="button" (click)="addNewUser(newUser.value)" >
+        add 
+    </button>
+   
+    <div>
+        <button mat-button color="accent" (click)="showUsers()">show users</button>
+
+     <button mat-button color="accent" (click)="delete()" > delete user </button>
+    </div>
+    <p [style.text-decoration]="lineThrough" style="color: blue;"> special user :{{user}}</p>
+

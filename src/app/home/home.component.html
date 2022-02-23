@@ -1,0 +1,29 @@
+
+<div style="text-align: center;">
+
+    <app-users  (newUser)="addOne($event)"  (showImg)="show($event)" [user]="specialUser" (deleteUser)="remove($event)" 
+    ></app-users>
+  
+ <!-- <app-users [user]="specialUser" (deleteUser)="remove($event)" ></app-users> -->
+    
+     
+      <h2 style="color: red;"> Users </h2>
+      
+          <p *ngFor="let user of users" >{{user}}</p>
+          <img src="../../assets/developers.jpg" alt="developer" *ngIf="shown" >
+  
+          <h2 style="color: blue;">Jobs</h2>
+      
+    <app-jobs (jobs)="addJob($event)" ></app-jobs>   
+   
+  
+  
+    
+    <p *ngFor="let item of jobs" >{{item }}</p>
+    </div>
+
+
+   
+
+    
+   
